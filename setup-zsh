@@ -1,0 +1,4 @@
+rm -f "$HOME/.zfunctions/prompt_pure_setup"
+ln -s "$PWD/zsh/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
+
+sh ./setup-dotfiles

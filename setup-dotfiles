@@ -1,8 +1,8 @@
 SetupDotFiles () {
-  rm "$HOME/.aliases"
-  rm "$HOME/.gitconfig"
-  rm "$HOME/.hushlogin"
-  rm "$HOME/.zshrc"
+  rm -f "$HOME/.aliases"
+  rm -f "$HOME/.gitconfig"
+  rm -f "$HOME/.hushlogin"
+  rm -f "$HOME/.zshrc"
 
   link "$PWD/dotfiles/aliases" "$HOME/.aliases"
   link "$PWD/dotfiles/gitconfig" "$HOME/.gitconfig"
