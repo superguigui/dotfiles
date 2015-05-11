@@ -1,4 +1,3 @@
 # dotfiles
-My config for OSX
-
-Don't use the install script for now
+My config for OSX.
+Don't use any scripts for now.
