@@ -1,0 +1,27 @@
+SetupDotFiles () {
+  rm "$HOME/.aliases"
+  rm "$HOME/.gitconfig"
+  rm "$HOME/.hushlogin"
+  rm "$HOME/.zshrc"
+
+  link "$PWD/dotfiles/aliases" "$HOME/.aliases"
+  link "$PWD/dotfiles/gitconfig" "$HOME/.gitconfig"
+  link "$PWD/dotfiles/hushlogin" "$HOME/.hushlogin"
+  link "$PWD/dotfiles/zshrc" "$HOME/.zshrc"
+
+  source "$HOME/.aliases"
+  source "$HOME/.hushlogin"
+  source "$HOME/.zshrc"
+
+  echo "Your dotfiles have been set."
+}
+
+read -p "This script will override your dotfiles. Do you want to proceed? (y/n)? " answer
+case ${answer:0:1} in
+  y|Y )
+    SetupDotFiles
+  ;; 
+  * )
+    echo "Nothing was done to your dotfiles."
+  ;;
+esac
