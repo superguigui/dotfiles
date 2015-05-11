@@ -9,10 +9,6 @@ SetupDotFiles () {
   link "$PWD/dotfiles/hushlogin" "$HOME/.hushlogin"
   link "$PWD/dotfiles/zshrc" "$HOME/.zshrc"
 
-  source "$HOME/.aliases"
-  source "$HOME/.hushlogin"
-  source "$HOME/.zshrc"
-
   echo "Your dotfiles have been set."
 }
 
