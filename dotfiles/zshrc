@@ -35,12 +35,12 @@ prompt pure
 # ------------------------------------------------
 # ZSH Syntax Highlighting
 # ------------------------------------------------
-source "$HOME/config/zsh/tools/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/dotfiles/zsh/tools/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # ------------------------------------------------
 # Rupa/z
 # ------------------------------------------------
-. "$HOME/config/zsh/tools/z/z.sh"
+. "$HOME/dotfiles/zsh/tools/z/z.sh"
 
 # ------------------------------------------------
 # Functions
@@ -48,6 +48,11 @@ source "$HOME/config/zsh/tools/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 function md {
   mkdir -p $1 && cd $1
 }
+
+# ------------------------------------------------
+# Some Aliases
+# ------------------------------------------------
+source "$HOME/.aliases"
 
 # ------------------------------------------------
 # Some Colors
