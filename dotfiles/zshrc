@@ -32,6 +32,8 @@ fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit && promptinit
 prompt pure
 
+PURE_GIT_PULL=0
+
 # ------------------------------------------------
 # ZSH Syntax Highlighting
 # ------------------------------------------------
@@ -64,4 +66,21 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Paths
 # ------------------------------------------------
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$HOME/local:$HOME/local/springboard:$PATH
+
+
+# ------------------------------------------------
+# Springboard (for old projects only)
+# ------------------------------------------------
+alias springboard="$HOME/local/springboard/springboard"
+alias sb="$HOME/local/springboard/springboard"
+export SPRINGBOARD_HOME="$HOME/local/springboard"
+export PATH=$PATH:$SPRINGBOARD_HOME
+
+
+# ------------------------------------------------
+# For RVM
+# ------------------------------------------------
+export PATH="$HOME/.rvm/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
